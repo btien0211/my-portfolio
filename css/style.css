@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #4a90e2;
+    --accent-color: #d4af37;
+    --dark-bg: #1a1a2e;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --text-light: #f4f4f4;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+nav {
+    background-color: var(--dark-bg);
+    padding: 1rem 0;
+    position: sticky; top: 0; z-index: 1000;
+    text-align: center;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600; text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover { color: var(--accent-color); }
+
+header {
+    background: linear-gradient(135deg, var(--dark-bg), #16213e);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.profile-pic {
+    width: 150px; height: 150px;
+    border-radius: 50%; object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.5s;
+}
+.profile-pic:hover { transform: scale(1.05); }
+
+section { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
+
+section h2 {
+    text-align: center; font-size: 2rem; margin-bottom: 40px;
+    color: var(--dark-bg);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project {
+    background: var(--card-bg);
+    padding: 30px; border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    display: flex; flex-direction: column; justify-content: space-between;
+}
+.project:hover { transform: translateY(-10px); }
+
+.project.highlight { border-left: 5px solid var(--accent-color); background: #fffbf0; }
+
+.btn-view {
+    display: inline-block; padding: 10px 20px;
+    background-color: var(--dark-bg); color: white;
+    text-decoration: none; border-radius: 25px;
+    font-weight: 600; margin-top: 15px; align-self: flex-start;
+    transition: 0.3s;
+}
+.btn-view:hover { background-color: var(--accent-color); color: #000; }
